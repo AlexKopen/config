@@ -18,11 +18,6 @@ flatpak install flathub com.jetbrains.PhpStorm
 flatpak install flathub com.sublimetext.three
 ```
 
-fnm
-```
-curl -fsSL https://fnm.vercel.app/install | bash
-```
-
 OhMyZsh
 ```
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -31,6 +26,11 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 SpaceVim
 ```
 curl -sLf https://spacevim.org/install.sh | bash
+```
+
+fnm
+```
+curl -fsSL https://fnm.vercel.app/install | bash
 ```
 
 ```haskell
