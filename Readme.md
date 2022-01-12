@@ -155,10 +155,10 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   , ((0, xF86XK_AudioRaiseVolume), spawn $ "amixer -q set Master 5%+")
 
   -- Track seeking
-  , ((0, xF86XK_AudioPlay), spawn $ "playerctl play-pause")
-  , ((0, xF86XK_AudioNext), spawn $ "playerctl next")
-  , ((0, xF86XK_AudioPrev), spawn $ "playerctl previous")
-  , ((0, xF86XK_AudioStop), spawn $ "playerctl stop")
+  , ((0, xF86XK_AudioPlay), spawn $ "playerctl --player=spotify play-pause")
+  , ((0, xF86XK_AudioNext), spawn $ "playerctl --player=spotify next")
+  , ((0, xF86XK_AudioPrev), spawn $ "playerctl --player=spotify previous")
+  , ((0, xF86XK_AudioStop), spawn $ "playerctl --player=spotify stop")
 
   --------------------------------------------------------------------
   --  XMONAD CORE
