@@ -7,15 +7,7 @@ xmonad xmonad-contrib xmonad-utils polybar
 ```
 
 ```
-gnome-screenshot nautilus alacritty arcolinux-logout rofi playerctl xfce4-terminal galculator gnome-calendar xorg-xkill amixer playerctl
-```
-
-[Flatpak](https://flathub.org/home)
-```
-flatpak install flathub org.mozilla.firefox
-flatpak install flathub com.spotify.Client
-flatpak install flathub com.jetbrains.PhpStorm
-flatpak install flathub com.sublimetext.three
+gnome-screenshot dolphin alacritty arcolinux-logout rofi playerctl xfce4-terminal galculator gnome-calendar xorg-xkill amixer playerctl spotify brave sublime-text php-storm
 ```
 
 OhMyZsh
@@ -279,3 +271,12 @@ EndSection
 `xrandr --verbose | grep "TearFree"`
 
 `rofi-theme-selector`
+
+Sublimie Text
+```
+{
+    "font_size": 15,
+    "ignored_packages": [],
+    "word_wrap": "true",
+}
+```
