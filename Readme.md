@@ -249,7 +249,7 @@ Zsh
 export ZSH="$HOME/.oh-my-zsh"
 export EDITOR=vim
 # fnm
-export PATH=/home/mopar/.fnm:$PATH
+export PATH=$HOME/.fnm:$PATH
 eval "`fnm env`"
 
 ZSH_THEME="random"
