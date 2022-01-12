@@ -1,16 +1,43 @@
 ```
-yay fakeroot xmonad xmonad-contrib xmonad-utils
+yay fakeroot vim ranger zsh
 ```
 
 ```
-ranger gnome-screenshot nautilus alacritty arcolinux-logout rofi playerctl xfce4-terminal galculator
+xmonad xmonad-contrib xmonad-utils polybar
+```
+
+```
+gnome-screenshot nautilus alacritty arcolinux-logout rofi playerctl xfce4-terminal galculator gnome-calendar xorg-xkill amixer playerctl
+```
+
+[Flatpak](https://flathub.org/home)
+```
+flatpak install flathub org.mozilla.firefox
+flatpak install flathub com.spotify.Client
+flatpak install flathub com.jetbrains.PhpStorm
+flatpak install flathub com.sublimetext.three
+```
+
+fnm
+```
+curl -fsSL https://fnm.vercel.app/install | bash
+```
+
+OhMyZsh
+```
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+SpaceVim
+```
+curl -sLf https://spacevim.org/install.sh | bash
 ```
 
 ```haskell
 import System.IO
 import System.Exit
 
-import XMonad
+import XMonad hiding((|||))
 import XMonad.Hooks.SetWMName
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
@@ -28,13 +55,11 @@ import qualified Codec.Binary.UTF8.String as UTF8
 import XMonad.Layout.Spacing
 import XMonad.Layout.Gaps
 import XMonad.Layout.ResizableTile
-import XMonad.Layout.Fullscreen (fullscreenFull)
-import XMonad.Layout.Cross(simpleCross)
-import XMonad.Layout.Spiral(spiral)
 import XMonad.Layout.ThreeColumns
 import XMonad.Layout.MultiToggle
 import XMonad.Layout.MultiToggle.Instances
 import XMonad.Layout.IndependentScreens
+import XMonad.Layout.LayoutCombinators
 
 import XMonad.Layout.CenteredMaster(centerMaster)
 
@@ -73,11 +98,11 @@ myManageHook = composeAll . concat $
     ]
     where
     myCFloats = ["Galculator", "Xfce4-terminal"]
-    myTFloats = ["Downloads", "Save As..."]
+    myTFloats = ["Downloads", "Save As...", "Calendar"]
     myRFloats = []
     myIgnores = ["desktop_window"]
 
-myLayout = spacingRaw True (Border 0 5 5 5) True (Border 5 5 5 5) True $ avoidStruts $ mkToggle (NBFULL ?? NOBORDERS ?? EOT) $ tiled ||| ThreeColMid 1 (3/100) (1/2) ||| lFull
+myLayout = spacingRaw True (Border 0 5 5 5) True (Border 5 5 5 5) True $ avoidStruts $ tiled ||| ThreeColMid 1 (3/100) (1/2)
     where
         tiled = Tall nmaster delta tiled_ratio
         nmaster = 1
@@ -102,52 +127,31 @@ myMouseBindings (XConfig {XMonad.modMask = modMask}) = M.fromList $
 
 myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   ----------------------------------------------------------------------
-  -- SUPER + FUNCTION KEYS
+  -- USER CORE
 
-  [ ((modMask, xK_q), kill )
+ [  ((modMask, xK_Return), spawn $ "alacritty" )
+  , ((modMask, xK_q), kill ) 
   , ((modMask, xK_x), spawn $ "arcolinux-logout" )
   , ((modMask, xK_Escape), spawn $ "xkill" )
-  , ((modMask, xK_Return), spawn $ "alacritty" )
   , ((modMask, xK_d ), spawn $ "rofi -show run")
+  , ((0, xK_Print), spawn $ "gnome-screenshot -a")
+
+
+  -- USER APPS
+
   , ((modMask, xK_F1), spawn $ "firefox" )
   , ((modMask, xK_F2), spawn $ "nautilus" )
   , ((modMask, xK_F3), spawn $ "spotify" )
+  , ((modMask, xK_F9), spawn $ "subl ~/.xmonad/xmonad.hs ~/.zshrc" )
+  , ((modMask, xK_F10), spawn $ "gnome-calendar" )
   , ((modMask, xK_F11), spawn $ "galculator" )
   , ((modMask, xK_F12), spawn $ "xfce4-terminal --drop-down" )
 
-  -- SUPER + SHIFT KEYS
-
-  , ((modMask .|. shiftMask , xK_r ), spawn $ "xmonad --recompile && xmonad --restart")
-
-  -- FUNCTION KEYS
-
-  -- , ((0, xK_F12), spawn $ "xfce4-terminal --drop-down" )
-
-  -- CONTROL + ALT KEYS
-
-  -- , ((controlMask .|. mod1Mask , xK_a ), spawn $ "xfce4-appfinder")
-
-  -- ALT + ... KEYS
-
-  -- , ((mod1Mask, xK_r), spawn $ "xmonad --restart" )
-
-  --CONTROL + SHIFT KEYS
-
-  -- , ((controlMask .|. shiftMask , xK_Escape ), spawn $ "xfce4-taskmanager")
-
-  --SCREENSHOTS
-
-  , ((0, xK_Print), spawn $ "gnome-screenshot -a")
-
   --MULTIMEDIA KEYS
 
-  -- Mute volume
+  -- Volume
   , ((0, xF86XK_AudioMute), spawn $ "amixer -q set Master toggle")
-
-  -- Decrease volume
   , ((0, xF86XK_AudioLowerVolume), spawn $ "amixer -q set Master 5%-")
-
-  -- Increase volume
   , ((0, xF86XK_AudioRaiseVolume), spawn $ "amixer -q set Master 5%+")
 
   -- Track seeking
@@ -157,19 +161,22 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   , ((0, xF86XK_AudioStop), spawn $ "playerctl stop")
 
   --------------------------------------------------------------------
-  --  XMONAD LAYOUT KEYS
+  --  XMONAD CORE
+
+  -- Recompile and restart
+  , ((modMask .|. shiftMask , xK_r ), spawn $ "xmonad --recompile && xmonad --restart")
 
   -- Cycle through the available layout algorithms.
   , ((modMask, xK_space), sendMessage NextLayout)
 
-  --Focus selected desktop
-  , ((controlMask .|. mod1Mask , xK_Left ), prevWS)
-
-  --Focus selected desktop
-  , ((controlMask .|. mod1Mask , xK_Right ), nextWS)
-
   --  Reset the layouts on the current workspace to default.
   , ((modMask .|. shiftMask, xK_space), setLayout $ XMonad.layoutHook conf)
+
+  -- Navigate to previous workspace
+  , ((controlMask .|. mod1Mask , xK_Left ), prevWS)
+
+  -- Navigate to next workspace
+  , ((controlMask .|. mod1Mask , xK_Right ), nextWS)
 
   -- Move focus to the next window.
   , ((modMask, xK_j), windows W.focusDown)
@@ -179,6 +186,9 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
 
   -- Swap focus with the master window.
   , ((modMask .|. shiftMask, xK_m), windows W.swapMaster)
+
+  -- Focus on the master window.
+  , ((modMask, xK_m), windows W.focusMaster)
 
   -- Swap the focused window with the next window.
   , ((modMask .|. shiftMask, xK_j), windows W.swapDown)
@@ -232,6 +242,23 @@ main = do
 , keys = myKeys
 , mouseBindings = myMouseBindings
 }
+```
+
+Zsh
+```
+export ZSH="$HOME/.oh-my-zsh"
+export EDITOR=vim
+# fnm
+export PATH=/home/mopar/.fnm:$PATH
+eval "`fnm env`"
+
+ZSH_THEME="random"
+plugins=(git npm)
+
+source $ZSH/oh-my-zsh.sh
+
+alias r="ranger"
+alias d="cd ~/Documents"
 
 ```
 
