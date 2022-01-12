@@ -277,3 +277,5 @@ EndSection
 ```
 
 `xrandr --verbose | grep "TearFree"`
+
+`rofi-theme-selector`
