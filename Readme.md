@@ -131,8 +131,8 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
 
   -- USER APPS
 
-  , ((modMask, xK_F1), spawn $ "firefox" )
-  , ((modMask, xK_F2), spawn $ "nautilus" )
+  , ((modMask, xK_F1), spawn $ "brave" )
+  , ((modMask, xK_F2), spawn $ "dolphin" )
   , ((modMask, xK_F3), spawn $ "spotify" )
   , ((modMask, xK_F9), spawn $ "subl ~/.xmonad/xmonad.hs ~/.zshrc" )
   , ((modMask, xK_F10), spawn $ "gnome-calendar" )
