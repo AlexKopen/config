@@ -7,7 +7,7 @@ xmonad xmonad-contrib xmonad-utils polybar
 ```
 
 ```
-gnome-screenshot dolphin alacritty arcolinux-logout rofi playerctl xfce4-terminal galculator gnome-calendar xorg-xkill amixer playerctl spotify brave sublime-text php-storm lxappearance
+gnome-screenshot dolphin alacritty arcolinux-logout rofi playerctl xfce4-terminal galculator gnome-calendar xorg-xkill amixer playerctl spotify brave sublime-text php-storm lxappearance nitrogen
 ```
 
 OhMyZsh
