@@ -41,7 +41,7 @@ ssh-keygen -t ed25519 -C "alexkopen@gmail.com"
 ```
 
 ```
-git config --global user.email "alexkopen@gmail.com" && git config --global user.name "Alex Kopen"
+git config --global user.email "alexkopen@gmail.com" && git config --global user.name "Alex Kopen" && git config --global pull.rebase false
 ```
 
 [AMD Screen Tearing](https://davejansen.com/quick-how-to-fix-screen-tearing-in-ubuntu-with-amd-gpus/)
