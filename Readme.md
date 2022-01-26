@@ -36,8 +36,7 @@ Git
 git config --global user.email "alexkopen@gmail.com" && git config --global global user.name "Alex Kopen"
 ```
 
-AMD Screen Tearing
-[Guide](https://davejansen.com/quick-how-to-fix-screen-tearing-in-ubuntu-with-amd-gpus/)
+[AMD Screen Tearing](https://davejansen.com/quick-how-to-fix-screen-tearing-in-ubuntu-with-amd-gpus/)
 
 Directory: `etc/X11/xorg.conf.d`
 
