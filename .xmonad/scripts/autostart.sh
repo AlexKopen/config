@@ -8,3 +8,4 @@ function run {
 }
 
 (sleep 2; run $HOME/.config/polybar/launch.sh) &
+(sleep 2; run nitrogen --restore) &

@@ -1897,15 +1897,15 @@ format-unmounted-background = ${colors.background}
 
 [module/kernel]
 type = custom/script
-exec = uname -r
+exec = echo "1: Browser    2: Spotify    3: IDE    4: Files                    5: Config    6: Calendar    7: Calc    8: Settings                    9: Shutdown    10: Sleep    11: Logout    12: Terminal"
 tail = false
 interval = 1024
 
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 format-prefix = "  "
-format-prefix-foreground = #0084FF
-format-underline = #0084FF
+format-prefix-foreground = #FFAC1C
+format-underline = #FFAC1C
 
 ################################################################################
 
@@ -2106,7 +2106,7 @@ format-prefix = " "
 [module/pavolume]
 type = custom/script
 tail = true
-label = %output%
+label = Vol %output%
 exec = ~/.config/polybar/scripts/pavolume.sh --listen
 click-right = exec pavucontrol
 click-left = ~/.config/polybar/scripts/pavolume.sh --togmute
