@@ -61,8 +61,8 @@ myManageHook = composeAll . concat $
     , [resource =? i --> doIgnore | i <- myIgnores]
     ]
     where
-    myCFloats = ["Galculator", "Xfce4-terminal"]
-    myTFloats = ["Downloads", "Save As...", "Calendar"]
+    myCFloats = ["Downloads", "Save As...", "Xfce4-terminal"]
+    myTFloats = ["Calculator", "Calendar", "Customize Look and Feel"]
     myRFloats = []
     myIgnores = ["desktop_window"]
 
@@ -97,17 +97,17 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   , ((modMask, xK_q), kill ) 
   , ((modMask, xK_Escape), spawn $ "xkill" )
   , ((modMask, xK_d ), spawn $ "rofi -show run")
-  , ((0, xK_Print), spawn $ "xfce4-screenshooter -r -s ~/Pictures")
+  , ((0, xK_Print), spawn $ "gnome-screenshot -a")
 
   -- USER APPS
   , ((modMask, xK_F1), spawn $ "brave" )
   , ((modMask, xK_F2), spawn $ "spotify" )
   , ((modMask, xK_F3), spawn $ "phpstorm" )
-  , ((modMask, xK_F4), spawn $ "thunar" )
+  , ((modMask, xK_F4), spawn $ "nautilus" )
 
   , ((modMask, xK_F5), spawn $ "cd ~; subl . ~/.xmonad/xmonad.hs ~/.xmonad/xmonad.errors ~/.xmonad/scripts/autostart.sh ~/.zshrc ~/.config/polybar/config" )
   , ((modMask, xK_F6), spawn $ "gnome-calendar" )
-  , ((modMask, xK_F7), spawn $ "galculator" )
+  , ((modMask, xK_F7), spawn $ "gnome-calculator" )
   , ((modMask, xK_F8), spawn $ "lxappearance" )
 
   , ((modMask, xK_F9), spawn $ "systemctl poweroff" )

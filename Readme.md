@@ -1,6 +1,6 @@
 Core
 ```
-sudo pacman -S --needed base-devel yay xmonad xmonad-contrib xmonad-utils polybar vim ranger zsh git alacritty xorg-xkill rofi xfce4-screenshooter thunar gnome-calendar galculator lxappearance xfce4-terminal pamixer playerctl brave-browser nitrogen pavucontrol
+sudo pacman -S --needed base-devel yay xmonad xmonad-contrib xmonad-utils polybar vim ranger zsh git alacritty xorg-xkill rofi nautilus gnome-screenshot gnome-calendar gnome-calculator gnome-disk-utility gnome-calculator lxappearance xfce4-terminal pamixer playerctl brave-browser nitrogen pavucontrol
 ```
 
 ```
