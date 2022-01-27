@@ -36,6 +36,8 @@ import Control.Monad (liftM2)
 myStartupHook = do
     spawn "$HOME/.xmonad/scripts/autostart.sh"
     setWMName "LG3D"
+    spawnOn "1" $ "brave"
+    spawnOn "10" $ "spotify"
 
 -- colors
 normBord = "#4c566a"
