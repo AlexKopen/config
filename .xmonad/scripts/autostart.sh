@@ -1,10 +1,7 @@
 #!/bin/bash
 
-function run {
-  if ! pgrep $1 ;
-  then
-    $@&
-  fi
-}
+sleep 2;
 
-(sleep 2; run $HOME/.config/polybar/launch.sh && nitrogen --restore && guake) &
+$HOME/.config/polybar/launch.sh & 
+nitrogen --restore &
+guake

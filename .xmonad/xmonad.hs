@@ -97,7 +97,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   , ((modMask, xK_q), kill ) 
   , ((modMask, xK_Escape), spawn $ "xkill" )
   , ((modMask, xK_d ), spawn $ "rofi -show run")
-  , ((0, xK_Print), spawn $ "gnome-screenshot -a && killall gnome-screenshot")
+  , ((0, xK_Print), spawn $ "killall gnome-screenshot; gnome-screenshot -a")
 
   -- USER APPS
   , ((modMask, xK_F1), spawn $ "brave" )
