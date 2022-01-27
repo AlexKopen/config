@@ -62,7 +62,7 @@ myManageHook = composeAll . concat $
     ]
     where
     myCFloats = ["Downloads", "Save As...", "Guake"]
-    myTFloats = ["Calculator", "Calendar", "Customize Look and Feel"]
+    myTFloats = ["Calculator", "Calendar"]
     myRFloats = []
     myIgnores = ["desktop_window"]
 
@@ -97,9 +97,12 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   , ((modMask, xK_q), kill ) 
   , ((modMask, xK_Escape), spawn $ "xkill" )
   , ((modMask, xK_d ), spawn $ "rofi -show run")
+  , ((modMask, xK_i ), spawn $ "gnome-disks")
+  , ((modMask, xK_l ), spawn $ "lxappearance")
   , ((0, xK_Print), spawn $ "killall gnome-screenshot; gnome-screenshot -a")
 
   -- USER APPS
+
   , ((modMask, xK_F1), spawn $ "brave" )
   , ((modMask, xK_F2), spawn $ "spotify" )
   , ((modMask, xK_F3), spawn $ "phpstorm" )
@@ -108,7 +111,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   , ((modMask, xK_F5), spawn $ "cd ~; subl . ~/.zshrc ~/.xmonad/scripts/autostart.sh  ~/.config/polybar/config ~/.xmonad/xmonad.errors ~/.xmonad/xmonad.hs" )
   , ((modMask, xK_F6), spawn $ "gnome-calendar" )
   , ((modMask, xK_F7), spawn $ "gnome-calculator" )
-  , ((modMask, xK_F8), spawn $ "lxappearance" )
+  , ((modMask, xK_F8), spawn $ "gsettings reset org.gnome.ControlCenter last-panel; gnome-control-center" )
 
   , ((modMask, xK_F9), spawn $ "systemctl poweroff" )
   , ((modMask, xK_F10), spawn $ "systemctl suspend" )
