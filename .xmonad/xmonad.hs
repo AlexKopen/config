@@ -61,7 +61,7 @@ myManageHook = composeAll . concat $
     , [resource =? i --> doIgnore | i <- myIgnores]
     ]
     where
-    myCFloats = ["Downloads", "Save As...", "Xfce4-terminal", "Guake"]
+    myCFloats = ["Downloads", "Save As...", "Guake"]
     myTFloats = ["Calculator", "Calendar", "Customize Look and Feel"]
     myRFloats = []
     myIgnores = ["desktop_window"]
