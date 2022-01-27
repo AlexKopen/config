@@ -61,7 +61,7 @@ myManageHook = composeAll . concat $
     , [resource =? i --> doIgnore | i <- myIgnores]
     ]
     where
-    myCFloats = ["Downloads", "Save As...", "Xfce4-terminal"]
+    myCFloats = ["Downloads", "Save As...", "Xfce4-terminal", "Guake"]
     myTFloats = ["Calculator", "Calendar", "Customize Look and Feel"]
     myRFloats = []
     myIgnores = ["desktop_window"]
@@ -97,7 +97,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   , ((modMask, xK_q), kill ) 
   , ((modMask, xK_Escape), spawn $ "xkill" )
   , ((modMask, xK_d ), spawn $ "rofi -show run")
-  , ((0, xK_Print), spawn $ "gnome-screenshot -a")
+  , ((0, xK_Print), spawn $ "gnome-screenshot -a && killall gnome-screenshot")
 
   -- USER APPS
   , ((modMask, xK_F1), spawn $ "brave" )
@@ -113,7 +113,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   , ((modMask, xK_F9), spawn $ "systemctl poweroff" )
   , ((modMask, xK_F10), spawn $ "systemctl suspend" )
   , ((modMask, xK_F11), spawn $ "loginctl terminate-user mopar" )
-  , ((modMask, xK_F12), spawn $ "xfce4-terminal --drop-down" )
+  , ((modMask, xK_F12), spawn $ "guake-toggle" )
 
   --MULTIMEDIA KEYS
 
