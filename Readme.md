@@ -8,7 +8,8 @@ base-devel yay xmonad xmonad-contrib xmonad-utils polybar rofi \
 \
 alacritty vim ranger zsh git xorg-xkill nitrogen neofetch pamixer playerctl \
 \
-lxappearance gnome-control-center nautilus gnome-screenshot gnome-calendar gnome-calculator gnome-disk-utility guake brave-browser pavucontrol
+lxappearance gnome-control-center nautilus gnome-screenshot gnome-calendar gnome-calculator \
+gnome-disk-utility guake brave-browser
 ```
 
 ```
