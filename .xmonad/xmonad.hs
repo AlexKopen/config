@@ -117,7 +117,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
 
   , ((modMask, xK_F9), spawn $ "systemctl poweroff" )
   , ((modMask, xK_F10), spawn $ "systemctl suspend" )
-  , ((modMask, xK_F11), spawn $ "loginctl terminate-user $(whoami)" )
+  , ((modMask, xK_F11), spawn $ "loginctl terminate-user $USER" )
   , ((modMask, xK_F12), spawn $ "guake-toggle" )
 
   --MULTIMEDIA KEYS
