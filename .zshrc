@@ -9,7 +9,7 @@ plugins=(git npm)
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH=/home/mopar/.fnm:$PATH
+export PATH=/home/$USER/.fnm:$PATH
 eval "`fnm env`"
 
 alias r="ranger"
