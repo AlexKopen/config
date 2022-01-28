@@ -2,7 +2,13 @@
 
 Core
 ```
-sudo pacman -S --needed base-devel yay xmonad xmonad-contrib xmonad-utils polybar vim ranger zsh git alacritty xorg-xkill rofi nautilus gnome-screenshot gnome-calendar gnome-calculator gnome-disk-utility gnome-control-center lxappearance guake pamixer playerctl brave-browser nitrogen pavucontrol neofetch
+sudo pacman -S --needed \
+\
+base-devel yay xmonad xmonad-contrib xmonad-utils polybar rofi \
+\
+alacritty vim ranger zsh git xorg-xkill nitrogen neofetch pamixer playerctl \
+\
+lxappearance gnome-control-center nautilus gnome-screenshot gnome-calendar gnome-calculator gnome-disk-utility guake brave-browser pavucontrol
 ```
 
 ```

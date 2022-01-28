@@ -34,8 +34,8 @@ import qualified Data.ByteString as B
 import Control.Monad (liftM2)
 
 myStartupHook = do
-    spawn "$HOME/.xmonad/scripts/autostart.sh"
     setWMName "LG3D"
+    spawn "$HOME/.xmonad/scripts/autostart.sh"
     spawnOn "1" $ "brave"
     spawnOn "10" $ "spotify"
 
@@ -103,7 +103,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   , ((modMask, xK_l ), spawn $ "lxappearance")
   , ((0, xK_Print), spawn $ "killall gnome-screenshot; gnome-screenshot -a")
 
-  -- USER APPS
+  -- FUNCTION KEYS
 
   , ((modMask, xK_F1), spawn $ "brave" )
   , ((modMask, xK_F2), spawn $ "spotify" )
@@ -203,7 +203,7 @@ main = do
     xmonad . ewmh $
             myBaseConfig
                 {startupHook = myStartupHook
-, layoutHook = gaps [(U,35), (D,5), (R,5), (L,5)] $ myLayout ||| layoutHook myBaseConfig
+, layoutHook = gaps [(U,35), (D,5), (R,5), (L,5)] $ myLayout
 , manageHook = manageSpawn <+> myManageHook <+> manageHook myBaseConfig
 , modMask = myModMask
 , borderWidth = myBorderWidth
