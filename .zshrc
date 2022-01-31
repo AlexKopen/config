@@ -14,4 +14,6 @@ eval "`fnm env`"
 
 alias r="ranger"
 alias d="cd ~/Documents"
+alias p="sudo pacman -S --needed"
+alias y="yay"
 alias update="yes | sudo pacman -Syu && yay -Syu"
