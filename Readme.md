@@ -6,24 +6,14 @@ sudo pacman -S --needed \
 \
 base-devel yay xmonad xmonad-contrib xmonad-utils polybar rofi \
 \
-alacritty vim ranger zsh git xorg-xkill nitrogen neofetch pamixer playerctl \
+alacritty vim ranger zsh oh-my-zsh git xorg-xkill nitrogen neofetch pamixer playerctl \
 \
 lxappearance gnome-control-center nautilus gnome-screenshot gnome-calendar gnome-calculator \
 gnome-disk-utility guake brave-browser
 ```
 
 ```
-yay -S sublime-text-4 phpstorm phpstorm-jre spotify
-```
-
-[OhMyZsh](https://ohmyz.sh/)
-```
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
-
-[fnm](https://github.com/Schniz/fnm)
-```
-curl -fsSL https://fnm.vercel.app/install | bash
+yay -S sublime-text-4 phpstorm phpstorm-jre spotify fnm-bin
 ```
 
 [SpaceVim](https://spacevim.org/)
