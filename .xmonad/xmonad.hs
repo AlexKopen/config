@@ -37,7 +37,7 @@ myStartupHook = do
     setWMName "LG3D"
     spawn "$HOME/.xmonad/scripts/autostart.sh"
     spawnOn "1" $ "brave"
-    spawnOn "10" $ "spotify"
+    spawnOn "1" $ "spotify"
 
 -- colors
 normBord = "#4c566a"
@@ -110,7 +110,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   , ((modMask, xK_F3), spawn $ "phpstorm" )
   , ((modMask, xK_F4), spawn $ "nautilus" )
 
-  , ((modMask, xK_F5), spawn $ "cd ~; subl . ~/.zshrc ~/.xmonad/scripts/autostart.sh  ~/.config/polybar/config ~/.xmonad/xmonad.errors ~/.xmonad/xmonad.hs" )
+  , ((modMask, xK_F5), spawn $ "cd ~; code . ~/.zshrc ~/.xmonad/scripts/autostart.sh  ~/.config/polybar/config ~/.xmonad/xmonad.errors ~/.xmonad/xmonad.hs" )
   , ((modMask, xK_F6), spawn $ "gnome-calendar" )
   , ((modMask, xK_F7), spawn $ "gnome-calculator" )
   , ((modMask, xK_F8), spawn $ "gsettings reset org.gnome.ControlCenter last-panel; gnome-control-center" )

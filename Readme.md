@@ -13,7 +13,7 @@ gnome-disk-utility guake brave-browser docker docker-compose
 ```
 
 ```
-yay -S sublime-text-4 phpstorm phpstorm-jre spotify fnm-bin
+yay -S visual-studio-bin phpstorm phpstorm-jre spotify fnm-bin
 ```
 
 [SpaceVim](https://spacevim.org/)
@@ -21,13 +21,10 @@ yay -S sublime-text-4 phpstorm phpstorm-jre spotify fnm-bin
 curl -sLf https://spacevim.org/install.sh | bash
 ```
 
-Sublime Text
+[Docker](https://docs.docker.com/engine/install/linux-postinstall/#configure-docker-to-start-on-boot)
 ```
-{
-    "font_size": 15,
-    "ignored_packages": [],
-    "word_wrap": "true"
-}
+sudo systemctl enable docker.service
+sudo systemctl enable containerd.service
 ```
 
 Git
