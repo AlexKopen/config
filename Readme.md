@@ -13,7 +13,7 @@ gnome-disk-utility guake brave-browser docker docker-compose
 ```
 
 ```
-yay -S visual-studio-bin phpstorm phpstorm-jre spotify fnm-bin
+yay -S visual-studio-bin phpstorm phpstorm-jre spotify fnm-bin ckb-next
 ```
 
 [SpaceVim](https://spacevim.org/)
