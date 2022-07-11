@@ -9,11 +9,11 @@ base-devel git yay xmonad xmonad-contrib xmonad-utils polybar rofi \
 alacritty vim ranger zsh go oh-my-zsh xorg-xkill nitrogen neofetch pamixer playerctl \
 \
 lxappearance gnome-control-center nautilus gnome-screenshot gnome-calendar gnome-calculator \
-gnome-disk-utility guake brave-browser docker docker-compose
+gnome-disk-utility guake brave-browser firefox docker docker-compose
 ```
 
 ```
-yay -S visual-studio-bin phpstorm phpstorm-jre spotify fnm-bin ckb-next
+yay -S visual-studio-bin phpstorm phpstorm-jre spotify fnm-bin google-chrome
 ```
 
 [SpaceVim](https://spacevim.org/)
