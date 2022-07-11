@@ -6,7 +6,7 @@ sudo pacman -S --needed \
 \
 base-devel git yay xmonad xmonad-contrib xmonad-utils polybar rofi \
 \
-alacritty vim ranger zsh go oh-my-zsh xorg-xkill nitrogen neofetch pamixer playerctl \
+alacritty vim ranger zsh go oh-my-zsh xorg-xkill nitrogen neofetch pamixer playerctl pamac \
 \
 lxappearance gnome-control-center nautilus gnome-screenshot gnome-calendar gnome-calculator \
 gnome-disk-utility guake brave-browser firefox docker docker-compose

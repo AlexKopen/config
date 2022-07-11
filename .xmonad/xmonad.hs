@@ -64,7 +64,7 @@ myManageHook = composeAll . concat $
     ]
     where
     myCFloats = ["Downloads", "Save As...", "Guake"]
-    myTFloats = ["Calculator", "Calendar"]
+    myTFloats = ["Calculator", "Calendar", "Add/Remove Software"]
     myRFloats = []
     myIgnores = ["desktop_window"]
 
@@ -101,6 +101,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   , ((modMask, xK_d ), spawn $ "rofi -show run")
   , ((modMask, xK_i ), spawn $ "gnome-disks")
   , ((modMask, xK_l ), spawn $ "lxappearance")
+  , ((modMask, xK_p ), spawn $ "pamac-manager")
   , ((0, xK_Print), spawn $ "killall gnome-screenshot; gnome-screenshot -a")
 
   -- FUNCTION KEYS

@@ -1897,7 +1897,7 @@ format-unmounted-background = ${colors.background}
 
 [module/kernel]
 type = custom/script
-exec = echo "1: Browser    2: Spotify    3: IDE    4: Files                    5: Config    6: Calendar    7: Calc    8: Settings                    9: Shutdown    10: Sleep    11: Logout    12: Terminal"
+exec = echo "1: Browser    2: Spotify    3: IDE    4: Files                    5: Config    6: Calendar    7: Calc    8: Settings                    9: Shutdown    10: Sleep    11: Logout    12: Terminal                    I: Disks    L: Theme    P: Packages"
 tail = false
 interval = 1024
 
