@@ -14,7 +14,7 @@ gnome-disk-utility guake brave-browser firefox docker docker-compose
 ```
 
 ```
-yay -S visual-studio-bin phpstorm phpstorm-jre spotify fnm-bin google-chrome
+yay -S visual-studio-bin phpstorm phpstorm-jre goland goland-jre spotify fnm-bin google-chrome
 ```
 
 [SpaceVim](https://spacevim.org/)
