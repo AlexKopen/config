@@ -18,11 +18,6 @@ yay -S visual-studio-code-bin phpstorm goland spotify fnm-bin google-chrome post
 signal-desktop nvchad-git pycharm-professional
 ```
 
-[SpaceVim](https://spacevim.org/)
-```
-curl -sLf https://spacevim.org/install.sh | bash
-```
-
 [Docker](https://docs.docker.com/engine/install/linux-postinstall/#configure-docker-to-start-on-boot)
 ```
 sudo systemctl enable docker.service
