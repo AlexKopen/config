@@ -1,5 +1,5 @@
 export ZSH="$HOME/.oh-my-zsh"
-export EDITOR=vim
+export EDITOR=nvim
 export BROWSER=brave
 
 ZSH_THEME="random"
