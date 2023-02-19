@@ -36,7 +36,7 @@ import Control.Monad (liftM2)
 myStartupHook = do
     setWMName "LG3D"
     spawn "$HOME/.xmonad/scripts/autostart.sh"
-    spawnOn "1" $ "brave"
+    spawnOn "1" $ "firefox"
     spawnOn "1" $ "spotify"
 
 -- colors
@@ -102,11 +102,12 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   , ((modMask, xK_i ), spawn $ "gnome-disks")
   , ((modMask, xK_l ), spawn $ "lxappearance")
   , ((modMask, xK_p ), spawn $ "pamac-manager")
+  , ((modMask, xK_r ), spawn $ "reboot")
   , ((0, xK_Print), spawn $ "killall gnome-screenshot; gnome-screenshot -a")
 
   -- FUNCTION KEYS
 
-  , ((modMask, xK_F1), spawn $ "brave" )
+  , ((modMask, xK_F1), spawn $ "firefox" )
   , ((modMask, xK_F2), spawn $ "spotify" )
   , ((modMask, xK_F3), spawn $ "phpstorm" )
   , ((modMask, xK_F4), spawn $ "nautilus" )
