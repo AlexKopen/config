@@ -7,15 +7,16 @@ sudo pacman -S --needed \
 base-devel git yay xmonad xmonad-contrib xmonad-utils polybar rofi \
 \
 alacritty vim ranger zsh go python3 python-pip xorg-xkill nitrogen neofetch pamixer \
-playerctl pamac \
-\
-lxappearance gnome-control-center nautilus gnome-screenshot gnome-calendar gnome-calculator \
-gnome-disk-utility guake brave-browser firefox docker docker-compose
+playerctl lxappearance guake brave-browser firefox docker docker-compose
 ```
 
 ```
-yay -S visual-studio-code-bin phpstorm goland spotify fnm-bin google-chrome postman-bin \
-signal-desktop nvchad-git pycharm-professional
+yay -S visual-studio-code-bin phpstorm goland spotify google-chrome postman-bin
+```
+
+[Fnm](https://github.com/Schniz/fnm)
+```
+curl -fsSL https://fnm.vercel.app/install | bash
 ```
 
 [Docker](https://docs.docker.com/engine/install/linux-postinstall/#configure-docker-to-start-on-boot)
