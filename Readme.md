@@ -1,22 +1,30 @@
-![screenshot](./screenshot.png)
-
 Core
 ```
 sudo pacman -S --needed \
 \
 base-devel git yay xmonad xmonad-contrib xmonad-utils polybar rofi \
 \
-alacritty vim ranger zsh go python3 python-pip xorg-xkill nitrogen neofetch pamixer \
-playerctl lxappearance guake brave-browser firefox docker docker-compose
+alacritty vim ranger zsh go python3 python-pip xorg-xkill nitrogen neofetch \
+\
+pamixer playerctl lxappearance guake \
+\
+brave-browser docker docker-compose nautilus scrot xclip
 ```
 
 ```
-yay -S visual-studio-code-bin phpstorm goland spotify google-chrome postman-bin
+yay -S visual-studio-code-bin phpstorm phpstorm-jre goland goland-jre \
+\
+spotify postman-bin
 ```
 
-[Fnm](https://github.com/Schniz/fnm)
+[fnm](https://github.com/Schniz/fnm#installation)
 ```
 curl -fsSL https://fnm.vercel.app/install | bash
+```
+
+[Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh#basic-installation)
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
 [Docker](https://docs.docker.com/engine/install/linux-postinstall/#configure-docker-to-start-on-boot)
@@ -33,8 +41,21 @@ ssh-keygen -t ed25519 -C "alexkopen@gmail.com"
 ```
 
 ```
-git config --global user.email "alexkopen@gmail.com" && git config --global user.name "Alex Kopen" && git config --global pull.rebase false
+git config --global user.email "alexkopen@gmail.com" && \
+git config --global user.name "Alex Kopen" && \
+git config --global pull.rebase false
 ```
+
+GTK Programs Slow to Launch
+```
+sudo pacman -R xdg-desktop-portal-gnome gnome-keyring
+```
+
+Force Gnome Dark Theme
+```
+gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+```
+
 
 [AMD Screen Tearing](https://davejansen.com/quick-how-to-fix-screen-tearing-in-ubuntu-with-amd-gpus/)
 
