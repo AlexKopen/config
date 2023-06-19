@@ -6,7 +6,7 @@ base-devel git yay xmonad xmonad-contrib xmonad-utils polybar rofi \
 \
 alacritty vim ranger zsh go python3 python-pip xorg-xkill nitrogen neofetch \
 \
-pamixer playerctl lxappearance guake \
+pamixer playerctl guake \
 \
 brave-browser docker docker-compose nautilus scrot xclip
 ```
