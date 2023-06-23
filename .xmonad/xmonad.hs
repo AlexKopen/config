@@ -23,6 +23,7 @@ import XMonad.Layout.Simplest
 import XMonad.Actions.CycleWindows
 import XMonad.Layout.Fullscreen (fullscreenFull)
 import XMonad.Layout.Simplest
+import XMonad.Actions.SpawnOn (spawnOn)
 
 myTabConfig = def { fontName            = "xft:Mononoki Nerd Font:bold:size=9"
                   , activeColor         = "#292d3e"
@@ -56,10 +57,14 @@ myManageHook = composeAll
     ]
 
 main = do
-    spawn "$HOME/.config/polybar/launch.sh & guake & nitrogen --restore"
+    spawn "$HOME/.config/polybar/launch.sh & guake & nitrogen --restore & xautolock -time 30 -locker \"i3lock-fancy\" & xset s 3600 &"
     xmonad $ docks $ ewmh def
         { manageHook = myManageHook <+> manageHook def
         , layoutHook = myLayout
+        , startupHook = do
+            spawnOn "10" "spotify"
+            spawnOn "10" "sleep 1 && brave mail.google.com web.whatsapp.com messages.google.com finance.google.com"
+            windows $ W.greedyView "10"
         , modMask = superMask
         , terminal = "alacritty"
         , borderWidth = 2
@@ -92,9 +97,9 @@ main = do
 
           -- PROGRAMS
           , ((superMask, xK_p ), spawn $ "pamac-manager")
-          , ((superMask, xK_z ), spawn $ "cd ~/.xmonad && chmod +x pass.sh && . ./pass.sh && echo -n $PASS1 | xclip -selection clipboard")
-          , ((superMask, xK_x ), spawn $ "cd ~/.xmonad && chmod +x pass.sh && . ./pass.sh && echo -n $PASS2 | xclip -selection clipboard")
-          , ((superMask, xK_c ), spawn $ "cd ~/.xmonad && chmod +x pass.sh && . ./pass.sh && echo -n $PASS3 | xclip -selection clipboard")
+          , ((superMask, xK_z ), spawn $ "cd $HOME/.xmonad && chmod +x pass.sh && . ./pass.sh && echo -n $PASS1 | xclip -selection clipboard")
+          , ((superMask, xK_x ), spawn $ "cd $HOME/.xmonad && chmod +x pass.sh && . ./pass.sh && echo -n $PASS2 | xclip -selection clipboard")
+          , ((superMask, xK_c ), spawn $ "cd $HOME/.xmonad && chmod +x pass.sh && . ./pass.sh && echo -n $PASS3 | xclip -selection clipboard")
     
           
           -- FUNCTION KEYS
@@ -106,7 +111,7 @@ main = do
 
           , ((superMask, xK_F5), spawn $ "goland" )
           , ((superMask, xK_F6), spawn $ "nautilus" )
-          , ((superMask, xK_F7), spawn $ "" )
+          , ((superMask, xK_F7), spawn $ "i3lock-fancy" )
           , ((superMask, xK_F8), spawn $ "reboot" )
 
           , ((superMask, xK_F9), spawn $ "systemctl poweroff" )

@@ -8,13 +8,13 @@ alacritty vim ranger zsh go python3 python-pip xorg-xkill nitrogen neofetch \
 \
 pamixer playerctl lxappearance guake \
 \
-brave-browser docker docker-compose nautilus scrot xclip
+brave-browser docker docker-compose nautilus scrot xclip xautolock
 ```
 
 ```
 yay -S visual-studio-code-bin phpstorm phpstorm-jre goland goland-jre \
 \
-spotify postman-bin
+spotify postman-bin i3lock-fancy
 ```
 
 [fnm](https://github.com/Schniz/fnm#installation)
