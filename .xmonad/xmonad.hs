@@ -57,7 +57,7 @@ myManageHook = composeAll
     ]
 
 main = do
-    spawn "$HOME/.config/polybar/launch.sh & guake & nitrogen --restore & xautolock -time 30 -locker \"i3lock-fancy\" & xset s 3600 &"
+    spawn "$HOME/.config/polybar/launch.sh & guake & nitrogen --restore & xautolock -time 60 -locker \"i3lock-fancy\" & (xset dpms 3600 3600 3600 & xset s 3600 & xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/dpms-on-ac-sleep -s 60)"
     xmonad $ docks $ ewmh def
         { manageHook = myManageHook <+> manageHook def
         , layoutHook = myLayout
