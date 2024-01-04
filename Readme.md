@@ -14,7 +14,7 @@ brave-browser docker docker-compose nemo scrot xclip xautolock
 ```
 yay -S visual-studio-code-bin phpstorm phpstorm-jre goland goland-jre \
 \
-spotify postman-bin i3lock-fancy
+spotify postman-bin i3lock-fancy qbittorrent-enhanced
 ```
 
 [fnm](https://github.com/Schniz/fnm#installation)
@@ -73,3 +73,9 @@ EndSection
 ```
 
 Validate: `xrandr --verbose | grep "TearFree"`
+
+Theming
+```
+lxappearance
+xfce4-appearance-settings
+```
