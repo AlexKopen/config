@@ -97,6 +97,7 @@ main = do
 
           -- PROGRAMS
           , ((superMask, xK_p ), spawn $ "pamac-manager")
+          , ((superMask, xK_v ), spawn $ "cd /opt/piavpn/bin && ./pia-client")
           , ((superMask, xK_z ), spawn $ "cd $HOME/.xmonad && chmod +x pass.sh && . ./pass.sh && echo -n $PASS1 | xclip -selection clipboard")
           , ((superMask, xK_x ), spawn $ "cd $HOME/.xmonad && chmod +x pass.sh && . ./pass.sh && echo -n $PASS2 | xclip -selection clipboard")
           , ((superMask, xK_c ), spawn $ "cd $HOME/.xmonad && chmod +x pass.sh && . ./pass.sh && echo -n $PASS3 | xclip -selection clipboard")
@@ -110,7 +111,7 @@ main = do
           , ((superMask, xK_F4), spawn $ "code" )
 
           , ((superMask, xK_F5), spawn $ "goland" )
-          , ((superMask, xK_F6), spawn $ "nautilus" )
+          , ((superMask, xK_F6), spawn $ "nemo" )
           , ((superMask, xK_F7), spawn $ "i3lock-fancy" )
           , ((superMask, xK_F8), spawn $ "reboot" )
 
