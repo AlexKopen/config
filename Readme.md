@@ -31,6 +31,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 ```
 sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
+sudo usermod -aG docker $USER
 ```
 
 Git
