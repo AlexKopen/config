@@ -8,7 +8,7 @@ alacritty vim ranger zsh go python3 python-pip xorg-xkill nitrogen neofetch \
 \
 pamixer playerctl guake \
 \
-brave-browser docker docker-compose nautilus scrot xclip xautolock
+brave-browser docker docker-compose nemo scrot xclip xautolock
 ```
 
 ```
@@ -45,6 +45,8 @@ git config --global user.email "alexkopen@gmail.com" && \
 git config --global user.name "Alex Kopen" && \
 git config --global pull.rebase false
 ```
+
+[PIA](https://www.privateinternetaccess.com/download/linux-vpn)
 
 GTK Programs Slow to Launch
 ```
