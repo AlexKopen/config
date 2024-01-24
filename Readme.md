@@ -80,3 +80,8 @@ Theming
 lxappearance
 xfce4-appearance-settings
 ```
+
+Trezor
+[Desktop App](https://trezor.io/trezor-suite)
+
+[Udev Rules](https://trezor.io/learn/a/udev-rules)
