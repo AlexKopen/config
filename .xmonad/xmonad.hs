@@ -56,6 +56,11 @@ myManageHook = composeAll
     , manageDocks
     ]
 
+superControlMActions = do
+    withFocused (sendMessage . MergeAll)
+    withFocused (sendMessage . UnMerge)
+    windows W.swapMaster
+
 main = do
     spawn "(killall -q polybar; sleep 2; polybar mainbar-xmonad) & guake & nitrogen --restore & xautolock -time 60 -locker \"i3lock-fancy\" & (xset dpms 3600 3600 3600 & xset s 3600 & xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/dpms-on-ac-sleep -s 60)"
     xmonad $ docks $ ewmh def
@@ -80,8 +85,8 @@ main = do
             , ((superMask, xK_Escape), spawn $ "xkill" )
 
 
-          , ((superMask .|. controlMask, xK_m), withFocused (sendMessage . MergeAll))
-          , ((superMask .|. controlMask, xK_u), withFocused (sendMessage . UnMerge))
+          -- Window tabs
+          , ((superMask .|. controlMask, xK_m), superControlMActions)
           , ((superMask .|. controlMask, xK_period), onGroup W.focusUp')
 
             
