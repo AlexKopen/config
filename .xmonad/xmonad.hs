@@ -112,7 +112,7 @@ main = do
 
           , ((superMask, xK_F1), spawn $ "brave" )
           , ((superMask, xK_F2), spawn $ "spotify" )
-          , ((superMask, xK_F3), spawn $ "phpstorm" )
+          , ((superMask, xK_F3), spawn $ "webstorm" )
           , ((superMask, xK_F4), spawn $ "code" )
 
           , ((superMask, xK_F5), spawn $ "goland" )
