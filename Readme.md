@@ -8,13 +8,11 @@ alacritty vim ranger zsh go python3 python-pip xorg-xkill nitrogen neofetch \
 \
 pamixer playerctl guake \
 \
-brave-browser docker docker-compose nemo scrot xclip xautolock
+docker docker-compose nemo scrot xclip xautolock
 ```
 
 ```
-yay -S visual-studio-code-bin phpstorm phpstorm-jre goland goland-jre \
-\
-spotify postman-bin i3lock-fancy qbittorrent-enhanced
+yay -S i3lock-fancy
 ```
 
 [fnm](https://github.com/Schniz/fnm#installation)
@@ -45,6 +43,11 @@ ssh-keygen -t ed25519 -C "alexkopen@gmail.com"
 git config --global user.email "alexkopen@gmail.com" && \
 git config --global user.name "Alex Kopen" && \
 git config --global pull.rebase false
+```
+
+Snapcraft
+```
+sudo ln -s /var/lib/snapd/snap /snap
 ```
 
 [PIA](https://www.privateinternetaccess.com/download/linux-vpn)

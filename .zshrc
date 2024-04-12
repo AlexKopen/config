@@ -9,7 +9,7 @@ plugins=(git npm)
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH="/home/alex/.local/share/fnm:$PATH"
+export PATH="/home/$USER/.local/share/fnm:$PATH"
 eval "`fnm env`"
 
 export GOPATH=$HOME/go

@@ -9,7 +9,7 @@ import qualified XMonad.StackSet as W
 import XMonad.Layout.ResizableTile
 import XMonad.Actions.CycleWS
 import Graphics.X11.ExtraTypes.XF86
-import XMonad.Layout.Named
+import XMonad.Layout.Renamed
 import XMonad.Actions.MouseResize
 import XMonad.Layout.WindowArranger (windowArrange, WindowArrangerMsg(..))
 import Control.Monad (liftM2)
@@ -57,7 +57,7 @@ myManageHook = composeAll
     ]
 
 main = do
-    spawn "$HOME/.config/polybar/launch.sh & guake & nitrogen --restore & xautolock -time 60 -locker \"i3lock-fancy\" & (xset dpms 3600 3600 3600 & xset s 3600 & xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/dpms-on-ac-sleep -s 60)"
+    spawn "(killall -q polybar; sleep 2; polybar mainbar-xmonad) & guake & nitrogen --restore & xautolock -time 60 -locker \"i3lock-fancy\" & (xset dpms 3600 3600 3600 & xset s 3600 & xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/dpms-on-ac-sleep -s 60)"
     xmonad $ docks $ ewmh def
         { manageHook = myManageHook <+> manageHook def
         , layoutHook = myLayout
