@@ -1,29 +1,16 @@
 Core
 ```
-sudo pacman -S --needed \
-\
-base-devel git yay xmonad xmonad-contrib xmonad-utils polybar rofi \
-\
-alacritty vim ranger zsh go python3 python-pip xorg-xkill nitrogen neofetch \
-\
-pamixer playerctl guake \
-\
-docker docker-compose nemo scrot xclip xautolock
-```
-
-```
-yay -S i3lock-fancy
+sudo apt update && sudo apt install -y \
+build-essential git xmonad libghc-xmonad-contrib-dev polybar rofi \
+vim ranger zsh golang python3 python3-pip x11-utils nitrogen neofetch \
+pavucontrol playerctl guake \
+nemo scrot xclip xautolock lxappearance i3lock-fancy
 ```
 
 [fnm](https://github.com/Schniz/fnm#installation)
-```
-curl -fsSL https://fnm.vercel.app/install | bash
-```
 
 [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh#basic-installation)
-```
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
+
 
 [Docker](https://docs.docker.com/engine/install/linux-postinstall/#configure-docker-to-start-on-boot)
 ```
@@ -62,7 +49,6 @@ Force Gnome Dark Theme
 gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 ```
 
-
 [AMD Screen Tearing](https://davejansen.com/quick-how-to-fix-screen-tearing-in-ubuntu-with-amd-gpus/)
 
 Directory: `etc/X11/xorg.conf.d`
@@ -77,12 +63,6 @@ EndSection
 ```
 
 Validate: `xrandr --verbose | grep "TearFree"`
-
-Theming
-```
-lxappearance
-xfce4-appearance-settings
-```
 
 Trezor
 [Desktop App](https://trezor.io/trezor-suite)
