@@ -9,6 +9,8 @@ nemo scrot xclip xautolock lxappearance i3lock-fancy
 
 [fnm](https://github.com/Schniz/fnm#installation)
 
+[gvm](https://github.com/moovweb/gvm)
+
 [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh#basic-installation)
 
 
