@@ -2,7 +2,7 @@ Core
 ```
 sudo apt update && sudo apt install -y \
 build-essential git xmonad libghc-xmonad-contrib-dev polybar rofi \
-vim ranger zsh golang python3 python3-pip x11-utils nitrogen neofetch \
+vim ranger zsh x11-utils nitrogen neofetch \
 pavucontrol playerctl guake \
 nemo scrot xclip xautolock lxappearance i3lock-fancy
 ```
