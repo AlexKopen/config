@@ -12,8 +12,8 @@ source $ZSH/oh-my-zsh.sh
 export PATH="/home/$USER/.local/share/fnm:$PATH"
 eval "`fnm env`"
 
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
+[[ -s "/home/$USER/.gvm/scripts/gvm" ]] && source "/home/$USER/.gvm/scripts/gvm"
+gvm use go1.22.2 > /dev/null 2>&1
 
 alias r="ranger"
 alias d="cd ~/Documents"
