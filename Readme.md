@@ -4,7 +4,8 @@ sudo apt update && sudo apt install -y \
 build-essential git xmonad libghc-xmonad-contrib-dev polybar rofi \
 vim ranger zsh x11-utils nitrogen neofetch \
 pavucontrol playerctl guake \
-nemo scrot xclip xautolock lxappearance i3lock-fancy texlive-xetex texlive-fonts-extra
+nemo scrot xclip xautolock lxappearance i3lock-fancy \
+texlive-xetex texlive-fonts-extra
 ```
 
 [fnm](https://github.com/Schniz/fnm#installation)
