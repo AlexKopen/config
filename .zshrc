@@ -18,5 +18,5 @@ gvm use go1.22.2 > /dev/null 2>&1
 alias r="ranger"
 alias d="cd ~/Documents"
 alias p="sudo apt install"
-alias update="rm -rf ~/.xmonad/build-x86_64-linux && rm -f ~/.xmonad/xmonad-x86_64-linux && rm -f ~/.xmonad/xmonad.errors sudo apt update && sudo apt upgrade -y"
-alias a='function _cap() { git add .; yarn run prettier; git commit -am "$1"; git push; }; _cap'
+alias update="rm -rf ~/.xmonad/build-x86_64-linux && rm -f ~/.xmonad/xmonad-x86_64-linux && rm -f ~/.xmonad/xmonad.errors && sudo apt update && sudo apt upgrade -y && sudo apt-get update && sudo apt-get upgrade -y && sudo apt autoremove -y && sudo apt-get autoremove -y"
+alias a='function _cap() { git add .; npm run prettier; git commit -am "$1"; git push; }; _cap'
