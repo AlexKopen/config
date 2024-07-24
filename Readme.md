@@ -2,15 +2,17 @@ Core
 ```
 sudo apt update && sudo apt install -y \
 build-essential git xmonad libghc-xmonad-contrib-dev polybar rofi \
-vim ranger zsh golang python3 python3-pip x11-utils nitrogen neofetch \
+vim ranger zsh x11-utils nitrogen neofetch \
 pavucontrol playerctl guake \
-nemo scrot xclip xautolock lxappearance i3lock-fancy
+nemo scrot xclip xautolock lxappearance i3lock-fancy \
+texlive-xetex texlive-fonts-extra
 ```
 
 [fnm](https://github.com/Schniz/fnm#installation)
 
-[Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh#basic-installation)
+[gvm](https://github.com/moovweb/gvm)
 
+[Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh#basic-installation)
 
 [Docker](https://docs.docker.com/engine/install/linux-postinstall/#configure-docker-to-start-on-boot)
 ```
@@ -32,26 +34,16 @@ git config --global user.name "Alex Kopen" && \
 git config --global pull.rebase false
 ```
 
-Snapcraft
+[Snapcraft](https://snapcraft.io/store)
 ```
 sudo ln -s /var/lib/snapd/snap /snap
 ```
 
 [PIA](https://www.privateinternetaccess.com/download/linux-vpn)
 
-GTK Programs Slow to Launch
-```
-sudo pacman -R xdg-desktop-portal-gnome gnome-keyring
-```
-
-Force Gnome Dark Theme
-```
-gsettings set org.gnome.desktop.interface color-scheme prefer-dark
-```
-
 [AMD Screen Tearing](https://davejansen.com/quick-how-to-fix-screen-tearing-in-ubuntu-with-amd-gpus/)
 
-Directory: `etc/X11/xorg.conf.d`
+Directory: `/etc/X11/xorg.conf.d`
 
 File: `20-amdgpu.conf`
 ```
