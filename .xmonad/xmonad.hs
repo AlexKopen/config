@@ -62,13 +62,13 @@ superControlMActions = do
     windows W.swapMaster
 
 main = do
-    spawn "(killall -q polybar; sleep 2; polybar mainbar-xmonad --config=~/.config/polybar/config.ini) & guake & nitrogen --restore & xautolock -time 60 -locker \"i3lock-fancy\" & (xset dpms 3600 3600 3600 & xset s 3600 & xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/dpms-on-ac-sleep -s 60) & pactl set-sink-volume 0 100% & xmodmap ~/.Xmodmap"
+    spawn "(killall -q polybar; sleep 2; polybar mainbar-xmonad --config=~/.config/polybar/config.ini) & guake & nitrogen --restore & xautolock -time 60 -locker \"i3lock-fancy\" & (xset dpms 3600 3600 3600 & xset s 3600 & xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/dpms-on-ac-sleep -s 60) & pactl set-sink-volume 0 100% & systemctl start jellyfin"
     xmonad $ docks $ ewmh def
         { manageHook = myManageHook <+> manageHook def
         , layoutHook = myLayout
         , startupHook = do
             spawnOn "10" "spotify"
-            spawnOn "10" "sleep 1 && brave mail.google.com web.whatsapp.com messages.google.com finance.google.com"
+            spawnOn "10" "sleep 2 && firefox mail.google.com web.whatsapp.com messages.google.com finance.google.com"
             windows $ W.greedyView "10"
         , modMask = superMask
         , terminal = "alacritty"
@@ -110,13 +110,13 @@ main = do
           
           -- FUNCTION KEYS
 
-          , ((superMask, xK_F1), spawn $ "brave" )
+          , ((superMask, xK_F1), spawn $ "firefox" )
           , ((superMask, xK_F2), spawn $ "spotify" )
           , ((superMask, xK_F3), spawn $ "webstorm" )
           , ((superMask, xK_F4), spawn $ "code" )
 
           , ((superMask, xK_F5), spawn $ "goland" )
-          , ((superMask, xK_F6), spawn $ "nemo" )
+          , ((superMask, xK_F6), spawn $ "thunar" )
           , ((superMask, xK_F7), spawn $ "i3lock-fancy" )
           , ((superMask, xK_F8), spawn $ "reboot" )
 
