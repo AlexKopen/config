@@ -1,4 +1,4 @@
-Core
+# Core
 ```
 sudo apt install -y \
 build-essential git xmonad libghc-xmonad-contrib-dev polybar rofi \
