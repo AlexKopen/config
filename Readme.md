@@ -77,3 +77,5 @@ Validate: `xrandr --verbose | grep "TearFree"`
 `layout.css.devPixelsPerPx`
 
 1.3
+
+## [Jellyfin](https://jellyfin.org/docs/general/installation/linux)
