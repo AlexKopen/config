@@ -62,7 +62,7 @@ superControlMActions = do
     windows W.swapMaster
 
 main = do
-    spawn "(killall -q polybar; sleep 2; polybar mainbar-xmonad --config=~/.config/polybar/config.ini) & guake & nitrogen --restore & xautolock -time 60 -locker \"i3lock-fancy\" & (xset dpms 3600 3600 3600 & xset s 3600 & xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/dpms-on-ac-sleep -s 60) & pactl set-sink-volume 0 100% & systemctl start jellyfin"
+    spawn "(killall -q polybar; sleep 2; polybar mainbar-xmonad --config=~/.config/polybar/config.ini) & guake & nitrogen --restore & xautolock -time 60 -locker \"i3lock-fancy\" & (xset dpms 3600 3600 3600 & xset s 3600 & xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/dpms-on-ac-sleep -s 60) & pactl set-sink-volume @DEFAULT_SINK@ 100% & systemctl start jellyfin"
     xmonad $ docks $ ewmh def
         { manageHook = myManageHook <+> manageHook def
         , layoutHook = myLayout
@@ -135,9 +135,9 @@ main = do
           
 
           -- Volume
-          , ((0, xF86XK_AudioMute), spawn $ "amixer -q set Master toggle")
-          , ((0, xF86XK_AudioLowerVolume), spawn $ "amixer -q set Master 5%-")
-          , ((0, xF86XK_AudioRaiseVolume), spawn $ "amixer -q set Master 5%+")
+          , ((0, xF86XK_AudioMute), spawn $ "pactl set-sink-mute @DEFAULT_SINK@ toggle")
+          , ((0, xF86XK_AudioLowerVolume), spawn $ "pactl set-sink-volume @DEFAULT_SINK@ -5%")
+          , ((0, xF86XK_AudioRaiseVolume), spawn $ "pactl set-sink-volume @DEFAULT_SINK@ +5%")
 
           , ((0, xK_Print), spawn $ "scrot -s")
 

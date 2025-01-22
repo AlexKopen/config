@@ -86,7 +86,7 @@ function volSync {
 }
 
 function getCurVol {
-    curVol=$(pacmd list-sinks | grep -A 15 "index: $active_sink$" | grep 'volume:' | grep -E -v 'base volume:' | awk -F : '{print $3}' | grep -o -P '.{0,3}%'| sed s/.$// | tr -d ' ')
+    curVol=$(pactl get-sink-volume @DEFAULT_SINK@ | grep -oP '\d+%' | head -n 1 )
 }
 
 function volMute {
@@ -150,9 +150,9 @@ function output() {
     volMuteStatus
     if [ "${curStatus}" = 'yes' ]
     then
-        echo " $curVol%"
+        echo " $curVol"
     else
-        echo " $curVol%"
+        echo " $curVol"
     fi
 } #}}}
 
