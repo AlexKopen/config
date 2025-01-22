@@ -8,9 +8,9 @@ scrot xclip xautolock lxappearance i3lock-fancy \
 texlive-xetex texlive-fonts-extra
 ```
 
-#[Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh#basic-installation)
+## [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh#basic-installation)
 
-#Git
+## Git
 
 ```
 ssh-keygen -t ed25519 -C "alexkopen@gmail.com"
@@ -23,7 +23,7 @@ git config --global pull.rebase false
 ```
 
 
-#[asdf](https://asdf-vm.com/guide/getting-started.html)
+## [asdf](https://asdf-vm.com/guide/getting-started.html)
 
 [plugins](https://github.com/asdf-vm/asdf-plugins?tab=readme-ov-file)
 
@@ -41,21 +41,21 @@ asdf install nodejs 22.13.1
 asdf local nodejs 22.13.1
 ```
 
-#[Docker](https://docs.docker.com/engine/install/linux-postinstall/#configure-docker-to-start-on-boot)
+## [Docker](https://docs.docker.com/engine/install/linux-postinstall/#configure-docker-to-start-on-boot)
 ```
 sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
 sudo usermod -aG docker $USER
 ```
 
-#[Snapcraft](https://snapcraft.io/docs/installing-snap-on-linux-mint)
+## [Snapcraft](https://snapcraft.io/docs/installing-snap-on-linux-mint)
 ```
 sudo ln -s /var/lib/snapd/snap /snap
 ```
 
-#[PIA](https://www.privateinternetaccess.com/download/linux-vpn)
+## [PIA](https://www.privateinternetaccess.com/download/linux-vpn)
 
-#[AMD Screen Tearing](https://davejansen.com/quick-how-to-fix-screen-tearing-in-ubuntu-with-amd-gpus/)
+## [AMD Screen Tearing](https://davejansen.com/quick-how-to-fix-screen-tearing-in-ubuntu-with-amd-gpus/)
 
 Directory: `/etc/X11/xorg.conf.d`
 
@@ -70,7 +70,7 @@ EndSection
 
 Validate: `xrandr --verbose | grep "TearFree"`
 
-#Firefox HUD
+## Firefox HUD
 
 [about:config](about:config)
 
