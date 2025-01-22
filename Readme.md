@@ -79,3 +79,5 @@ Validate: `xrandr --verbose | grep "TearFree"`
 1.3
 
 ## [Jellyfin](https://jellyfin.org/docs/general/installation/linux)
+
+## [Calibre](https://calibre-ebook.com/download_linux)
