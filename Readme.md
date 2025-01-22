@@ -34,6 +34,27 @@ git config --global user.name "Alex Kopen" && \
 git config --global pull.rebase false
 ```
 
+ASDF
+[asdf](https://github.com/asdf-vm/asdf)
+[plugins](https://github.com/asdf-vm/asdf-plugins?tab=readme-ov-file)
+
+```
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.15.0
+. "$HOME/.asdf/asdf.sh"
+
+asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+asdf install nodejs latest
+asdf global nodejs latest
+
+asdf plugin add golang https://github.com/asdf-community/asdf-golang.git
+asdf install golang latest
+asdf global golang latest
+
+asdf list all nodejs
+asdf install nodejs 22.13.1
+asdf local nodejs 22.13.1
+```
+
 [Snapcraft](https://snapcraft.io/store)
 ```
 sudo ln -s /var/lib/snapd/snap /snap
