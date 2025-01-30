@@ -5,7 +5,7 @@ build-essential git xmonad libghc-xmonad-contrib-dev polybar rofi \
 vim ranger zsh x11-utils nitrogen neofetch \
 pavucontrol playerctl pulseaudio guake \
 scrot xclip xautolock lxappearance i3lock-fancy \
-texlive-xetex texlive-fonts-extra
+texlive-xetex texlive-fonts-extra qbittorrent
 ```
 
 ## [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh#basic-installation)
@@ -81,3 +81,11 @@ Validate: `xrandr --verbose | grep "TearFree"`
 ## [Jellyfin](https://jellyfin.org/docs/general/installation/linux)
 
 ## [Calibre](https://calibre-ebook.com/download_linux)
+
+## DPI
+
+`~/.Xresources`
+```
+Xft.dpi: 120
+```
+`xrdb -merge ~/.Xresources`
