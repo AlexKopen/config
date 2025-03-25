@@ -139,8 +139,7 @@ main = do
           , ((0, xF86XK_AudioLowerVolume), spawn $ "pactl set-sink-volume @DEFAULT_SINK@ -5%")
           , ((0, xF86XK_AudioRaiseVolume), spawn $ "pactl set-sink-volume @DEFAULT_SINK@ +5%")
 
-          , ((0, xK_Print), spawn $ "scrot -s")
-
+          , ((0, xK_Print), spawn $ "maim -s ~/Pictures/screenshot_$(date +%Y-%m-%d_%H-%M-%S).png")
 
           , ((superMask, xK_q), kill)
           , ((superMask, xK_d), spawn "rofi -show run")
