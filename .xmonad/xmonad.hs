@@ -62,7 +62,7 @@ superControlMActions = do
     windows W.swapMaster
 
 main = do
-    spawn "(killall -q polybar; sleep 2; polybar mainbar-xmonad --config=~/.config/polybar/config.ini) & guake & nitrogen --restore & xautolock -time 60 -locker \"i3lock-fancy\" & (xset dpms 3600 3600 3600 & xset s 3600 & xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/dpms-on-ac-sleep -s 60) & pactl set-sink-volume @DEFAULT_SINK@ 100% & systemctl start jellyfin"
+    spawn "(killall -q polybar; sleep 2; polybar mainbar-xmonad --config=~/.config/polybar/config.ini) & guake & nitrogen --restore & xautolock -time 60 -locker \"i3lock-fancy\" & (xset dpms 3600 3600 3600 & xset s 3600 & xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/dpms-on-ac-sleep -s 60) & pactl set-sink-volume @DEFAULT_SINK@ 100% & systemctl start jellyfin & numlockx on"
     xmonad $ docks $ ewmh def
         { manageHook = myManageHook <+> manageHook def
         , layoutHook = myLayout

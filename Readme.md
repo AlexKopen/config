@@ -5,7 +5,7 @@ build-essential git xmonad libghc-xmonad-contrib-dev polybar rofi \
 vim ranger zsh x11-utils nitrogen neofetch \
 pavucontrol playerctl pulseaudio guake \
 maim xclip xautolock lxappearance i3lock-fancy \
-texlive-xetex texlive-fonts-extra qbittorrent
+texlive-xetex texlive-fonts-extra qbittorrent numlockx
 ```
 
 ## [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh#basic-installation)
