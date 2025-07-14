@@ -93,5 +93,5 @@ Xft.dpi: 120
 ## Mouse Sensitivity
 ```
 xinput list
-xinput set-prop 17 "libinput Accel Speed" 0.0
+xinput set-prop 17 "libinput Accel Speed" 1
 ```
