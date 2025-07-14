@@ -89,3 +89,9 @@ Validate: `xrandr --verbose | grep "TearFree"`
 Xft.dpi: 120
 ```
 `xrdb -merge ~/.Xresources`
+
+## Mouse Sensitivity
+```
+xinput list
+xinput set-prop 17 "libinput Accel Speed" 0.0
+```
