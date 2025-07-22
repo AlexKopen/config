@@ -62,7 +62,7 @@ superControlMActions = do
     windows W.swapMaster
 
 main = do
-    spawn "(killall -q polybar; sleep 2; polybar mainbar-xmonad --config=~/.config/polybar/config.ini) & guake & nitrogen --restore & xautolock -time 60 -locker \"i3lock-fancy\" & (xset dpms 3600 3600 3600 & xset s 3600 & xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/dpms-on-ac-sleep -s 60) & pactl set-sink-volume @DEFAULT_SINK@ 100% & systemctl start jellyfin & numlockx on"
+    spawn "(killall -q polybar; polybar xmonad) & guake & nitrogen --restore & xautolock -time 60 -locker \"i3lock-fancy\" & (xset dpms 3600 3600 3600 & xset s 3600 & xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/dpms-on-ac-sleep -s 60) & pactl set-sink-volume @DEFAULT_SINK@ 100% & systemctl start jellyfin & numlockx on & xinput set-prop 17 \"libinput Accel Speed\" 1"
     xmonad $ docks $ ewmh def
         { manageHook = myManageHook <+> manageHook def
         , layoutHook = myLayout
@@ -111,19 +111,12 @@ main = do
           -- FUNCTION KEYS
 
           , ((superMask, xK_F1), spawn $ "firefox" )
-          , ((superMask, xK_F2), spawn $ "spotify" )
-          , ((superMask, xK_F3), spawn $ "webstorm" )
-          , ((superMask, xK_F4), spawn $ "code" )
-
-          , ((superMask, xK_F5), spawn $ "goland" )
-          , ((superMask, xK_F6), spawn $ "thunar" )
-          , ((superMask, xK_F7), spawn $ "i3lock-fancy" )
-          , ((superMask, xK_F8), spawn $ "reboot" )
-
-          , ((superMask, xK_F9), spawn $ "systemctl poweroff" )
-          , ((superMask, xK_F10), spawn $ "systemctl suspend" )
-          , ((superMask, xK_F11), spawn $ "loginctl terminate-user $USER" )
-          , ((superMask, xK_F12), spawn $ "guake-toggle" )
+          , ((superMask, xK_F2), spawn $ "thunar" )
+          , ((superMask, xK_F3), spawn $ "cd $HOME/.xmonad && chmod +x sleep.sh && . ./sleep.sh" )
+          , ((superMask, xK_F4), spawn $ "cd $HOME/.xmonad && chmod +x lock.sh && . ./lock.sh" )
+          , ((superMask, xK_F5), spawn $ "cd $HOME/.xmonad && chmod +x reboot.sh && . ./reboot.sh" )
+          , ((superMask, xK_F6), spawn $ "cd $HOME/.xmonad && chmod +x shutdown.sh && . ./shutdown.sh" )
+          , ((superMask, xK_F7), spawn $ "cd $HOME/.xmonad && chmod +x logout.sh && . ./logout.sh" )
 
           -- Utilities
           , ((superMask, xK_Return), spawn "alacritty")
@@ -139,10 +132,11 @@ main = do
           , ((0, xF86XK_AudioLowerVolume), spawn $ "pactl set-sink-volume @DEFAULT_SINK@ -5%")
           , ((0, xF86XK_AudioRaiseVolume), spawn $ "pactl set-sink-volume @DEFAULT_SINK@ +5%")
 
-          , ((0, xK_Print), spawn $ "maim -s ~/Pictures/screenshot_$(date +%Y-%m-%d_%H-%M-%S).png")
+          , ((0, xK_Print), spawn $ "maim -s $HOME/Pictures/screenshot_$(date +%Y-%m-%d_%H-%M-%S).png")
 
           , ((superMask, xK_q), kill)
           , ((superMask, xK_d), spawn "rofi -show run")
+          , ((superMask .|. altMask, xK_c), spawn "rofi -dmenu -i -p \"Cheatsheet\" < $HOME/.xmonad/cheats.txt")
           , ((superMask, xK_space), sendMessage NextLayout)
           , ((superMask .|. shiftMask, xK_space), setLayout $ Layout myLayout)
           , ((controlMask .|. altMask, xK_Left), prevWS)
