@@ -1,14 +1,15 @@
-Move Windows: S + Shift + J/K/M
-Move to Workspace: S + Shift + 0-9
-Change Workspace: Ctrl + Alt + Arrow |S + 0-9
+Move Windows: Super + Shift + J/K/M
+Move to Workspace: Super + Shift + 0-9
+Change Workspace: Ctrl + Alt + Arrow | Super + 0-9
 Resize: Ctrl + Shift + H/L
-Merge: Ctrl + S + M
-Navigate Tabs: Ctrl + S + .
-Reset: S + Shift + Space
-Float: S + Right Mouse Click
-Return Float: S + T
-X Kill: S + Escape
+Merge: Ctrl + Super + M
+Navigate Tabs: Ctrl + Super + .
+Reset: Super + Shift + Space
+Float: Super + Right Mouse Click
+Return Float: Super + T
+X Kill: Super + Escape
 X Kill Cancel: Right Click
-Recompile Xmonad: S + Shift + R
-Cycle Layouts: S + Space
-Main: S + M
+Recompile Xmonad: Super + Shift + R
+Cycle Layouts: Super + Space
+Main: Super + M
+Passwords: Super + Z/X/C
