@@ -129,8 +129,6 @@ main = do
 
           -- Volume
           , ((0, xF86XK_AudioMute), spawn $ "pactl set-sink-mute @DEFAULT_SINK@ toggle")
-          , ((0, xF86XK_AudioLowerVolume), spawn $ "pactl set-sink-volume @DEFAULT_SINK@ -5%")
-          , ((0, xF86XK_AudioRaiseVolume), spawn $ "pactl set-sink-volume @DEFAULT_SINK@ +5%")
 
           , ((0, xK_Print), spawn $ "maim -s $HOME/Pictures/screenshot_$(date +%Y-%m-%d_%H-%M-%S).png")
 
