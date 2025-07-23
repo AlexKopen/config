@@ -15,3 +15,7 @@ alias r="ranger"
 alias d="cd ~/Documents"
 alias update="rm -rf ~/.xmonad/build-x86_64-linux && rm -f ~/.xmonad/xmonad-x86_64-linux && rm -f ~/.xmonad/xmonad.errors && sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y"
 alias a='function _cap() { git add .; npm run prettier; git commit -am "$1"; git push; }; _cap'
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)

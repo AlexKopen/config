@@ -1,4 +1,4 @@
 #!/bin/bash
-export PASS1="pass1";
-export PASS2="pass2";
-export PASS3="pass3";
+export PASS1="";
+export PASS2="";
+export PASS3="";
