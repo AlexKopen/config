@@ -1,6 +1,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 export EDITOR=vim
 export BROWSER=firefox
+export PATH="$HOME/bin:$PATH"
 
 ZSH_THEME="random"
 DISABLE_AUTO_UPDATE=true

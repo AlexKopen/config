@@ -95,3 +95,18 @@ Xft.dpi: 120
 xinput list
 xinput set-prop 17 "libinput Accel Speed" 1
 ```
+
+## Symlink
+```
+mkdir -p ~/bin
+```
+
+To add it, put this in your ~/.zshrc:
+```
+export PATH="$HOME/bin:$PATH"
+```
+
+```
+chmod +x ~/apps/YourApp.AppImage
+ln -s ~/apps/YourApp.AppImage ~/bin/yourapp
+```
