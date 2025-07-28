@@ -80,7 +80,7 @@ main = do
         , "xautolock -time 120 -locker \"systemctl suspend\" -detectsleep  &" -- sleeps after 2 hours
         , "pactl set-sink-volume @DEFAULT_SINK@ 100% &" -- set volume to 100%
         , "numlockx on &" -- enable numlock
-        , "xinput set-prop 11 \"libinput Accel Speed\" 1 &" -- set the mouse sensitivity
+        , "xinput set-prop \"$(xinput list --id-only 'Logitech G502 HERO Gaming Mouse')\" 'libinput Accel Speed' 1" -- set the mouse sensitivity
         , "xdg-mime default thunar.desktop inode/directory" -- set thunar to default file explorer
         ]
 
