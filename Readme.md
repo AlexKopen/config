@@ -41,7 +41,7 @@ asdf install nodejs 22.13.1
 asdf local nodejs 22.13.1
 ```
 
-## [Docker](https://docs.docker.com/engine/install/linux-postinstall/#configure-docker-to-start-on-boot)
+## [Docker](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
 ```bash
 sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
