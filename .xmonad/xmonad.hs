@@ -153,7 +153,7 @@ main = do
           , ((0, xF86XK_AudioMute), spawn $ "pactl set-sink-mute @DEFAULT_SINK@ toggle")
 
           -- screenshots
-          , ((0, xK_Print), spawn $ "maim -s $HOME/Pictures/screenshot_$(date +%Y-%m-%d_%H-%M-%S).png")
+          , ((0, xK_Print), spawn $ "sh -c \"maim -s | tee $HOME/Pictures/screenshot_$(date +%Y-%m-%d_%H-%M-%S).png | xclip -selection clipboard -t image/png\"")
 
           -- force kill
           , ((superMask, xK_q), kill)
